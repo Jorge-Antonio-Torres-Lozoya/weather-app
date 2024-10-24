@@ -5,6 +5,7 @@
   <div class="search-container">
     <input type="text" [(ngModel)]="city" placeholder="Ingresa una ciudad" />
     <button (click)="searchWeather()">Search</button>
+    <i class="fas fa-search"></i> {{ loading ? 'Buscando...' : 'Buscar' }}
   </div>
 
   <p *ngIf="error" class="error">{{ error }}</p>
