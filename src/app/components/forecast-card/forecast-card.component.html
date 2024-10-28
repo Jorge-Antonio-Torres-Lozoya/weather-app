@@ -1,1 +1,21 @@
-<p>forecast-card works!</p>
+<div class="forecast-card">
+  <p class="day">{{ forecast.day }}</p>
+  <div class="weather-icon" [ngSwitch]="forecast.condition">
+    <i class="fas fa-sun" *ngSwitchCase="'Clear'"></i>
+    <i class="fas fa-cloud" *ngSwitchCase="'Clouds'"></i>
+    <i class="fas fa-cloud-rain" *ngSwitchCase="'Rain'"></i>
+    <i class="fas fa-cloud-showers-heavy" *ngSwitchCase="'Drizzle'"></i>
+    <i class="fas fa-bolt" *ngSwitchCase="'Thunderstorm'"></i>
+    <i class="fas fa-snowflake" *ngSwitchCase="'Snow'"></i>
+    <i class="fas fa-smog" *ngSwitchCase="'Mist'"></i>
+    <i class="fas fa-smog" *ngSwitchCase="'Smoke'"></i>
+    <i class="fas fa-smog" *ngSwitchCase="'Haze'"></i>
+    <i class="fas fa-smog" *ngSwitchCase="'Fog'"></i>
+    <i class="fas fa-smog" *ngSwitchCase="'Dust'"></i>
+    <i class="fas fa-wind" *ngSwitchCase="'Extreme'"></i>
+    <i class="fas fa-question" *ngSwitchDefault></i>
+  </div>
+
+  <p class="temperature">{{ forecast.temp }}°C</p>
+  <p class="condition">{{ forecast.condition }}</p>
+</div>
