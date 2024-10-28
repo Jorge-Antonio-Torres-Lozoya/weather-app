@@ -26,18 +26,20 @@ export class AppComponent {
   day?: string;
   currentTime?: Date;
   loading?: boolean;
+  input?: string;
 
   constructor(private weatherService: WeatherService) {}
 
   searchWeather() {
-    if (this.city) {
+    if (this.input) {
       this.loading = true;
       this.error = '';
       this.weather = null;
 
-      this.weatherService.getWeatherData(this.city).subscribe({
+      this.weatherService.getWeatherData(this.input).subscribe({
         next: (data) => {
           this.weather = data;
+          this.city = this.input?.toUpperCase();
           this.loading = false;
           this.currentTime = new Date();
           console.log(data);

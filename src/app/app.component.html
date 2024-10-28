@@ -1,11 +1,9 @@
 <div class="container">
   <h1>Weather App</h1>
   <p>Enter a city name to see its current weather and forecast.</p>
-
   <div class="search-container">
-    <input type="text" [(ngModel)]="city" placeholder="Ingresa una ciudad" />
-    <button (click)="searchWeather()">Search</button>
-    <i class="fas fa-search"></i> {{ loading ? 'Buscando...' : 'Buscar' }}
+    <input type="text" [(ngModel)]="input" placeholder="Ingresa una ciudad" />
+    <button (click)="searchWeather()"><i class="fas fa-search"></i> {{ loading ? 'Searching...' : 'Search' }}</button>
   </div>
 
   <p *ngIf="error" class="error">{{ error }}</p>

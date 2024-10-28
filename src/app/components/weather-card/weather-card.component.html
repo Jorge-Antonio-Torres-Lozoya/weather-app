@@ -1,1 +1,32 @@
-<p>weather-card works!</p>
+<div class="weather-card">
+  <div class="weather-header">
+    <h2>{{ city }}</h2>
+    <div class="weather-icon" [ngSwitch]="weather.current.condition">
+      <i class="fas fa-sun" *ngSwitchCase="'Clear'"></i>
+      <i class="fas fa-cloud" *ngSwitchCase="'Clouds'"></i>
+      <i class="fas fa-cloud-rain" *ngSwitchCase="'Rain'"></i>
+      <i class="fas fa-cloud-showers-heavy" *ngSwitchCase="'Drizzle'"></i>
+      <i class="fas fa-bolt" *ngSwitchCase="'Thunderstorm'"></i>
+      <i class="fas fa-snowflake" *ngSwitchCase="'Snow'"></i>
+      <i class="fas fa-smog" *ngSwitchCase="'Mist'"></i>
+      <i class="fas fa-smog" *ngSwitchCase="'Smoke'"></i>
+      <i class="fas fa-smog" *ngSwitchCase="'Haze'"></i>
+      <i class="fas fa-smog" *ngSwitchCase="'Fog'"></i>
+      <i class="fas fa-smog" *ngSwitchCase="'Dust'"></i>
+      <i class="fas fa-wind" *ngSwitchCase="'Extreme'"></i>
+      <i class="fas fa-question" *ngSwitchDefault></i>
+    </div>
+  </div>
+
+
+  <div class="weather-info">
+    <p class="temperature">{{ weather.current.temp }}°C</p>
+    <p class="condition">{{ weather.current.condition }}</p>
+  </div>
+  <div class="weather-details">
+    <p><i class="fas fa-thermometer-half"></i> Feels Like: {{ weather.current.feels_like }}°C</p>
+    <p><i class="fas fa-tint"></i> Humidity: {{ weather.current.humidity }}%</p>
+    <p><i class="fas fa-wind"></i> Wind Speed: {{ weather.current.wind_speed }} km/h</p>
+  </div>
+
+</div>
