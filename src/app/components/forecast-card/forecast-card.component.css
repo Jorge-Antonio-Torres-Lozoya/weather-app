@@ -4,7 +4,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px 35px;
   text-align: center;
-  /* width: calc(20% - 10px); */
   margin-bottom: 10px;
 }
 
@@ -31,14 +30,3 @@
   color: #666;
 }
 
-/* @media (max-width: 768px) {
-  .forecast-card {
-    width: calc(33.33% - 10px);
-  }
-}
-
-@media (max-width: 480px) {
-  .forecast-card {
-    width: calc(50% - 10px);
-  }
-} */

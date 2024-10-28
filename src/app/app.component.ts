@@ -4,6 +4,7 @@ import { ForecastCardComponent } from './components/forecast-card/forecast-card.
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { WeatherService } from './services/weather.service';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @Component({
@@ -12,6 +13,7 @@ import { WeatherService } from './services/weather.service';
   imports: [
     WeatherCardComponent,
     ForecastCardComponent,
+    NavbarComponent,
     FormsModule,
     CommonModule,
   ],
